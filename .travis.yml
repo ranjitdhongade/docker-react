@@ -6,4 +6,4 @@ before_install:
   - docker build -t ranjit/docker-react -f Dockerfile.dev .
 
 scripts:
-  - docker run ranjit/docker-react npm run test -- -- coverage
+  - docker run -e CI=true ranjit/docker-react npm run test -- -- coverage
